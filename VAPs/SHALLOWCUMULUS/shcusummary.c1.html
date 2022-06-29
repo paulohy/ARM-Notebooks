@@ -500,11 +500,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../CMAC/csaprsurcmac.c0.html">
-   CSAPRSURCMAC.C0 Plots
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../CMAC2/cmac2.c1.html">
    CMAC2.C1 Plots
   </a>
@@ -650,26 +645,6 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../KAZRCOR/kazrcorhi.c1.html">
-   KAZRCORHI.C1 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../KAZRCOR/kazrcormd.c0.html">
-   KAZRCORMD.C0 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../KAZRCOR/kazrcormd.c1.html">
-   KAZRCORMD.C1 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../KAZRCOR/kazrcorpr.c0.html">
-   KAZRCORPR.C0 Plots
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../LCLHEIGHT/lcl.c1.html">
    LCL.C1 Plots
   </a>
@@ -677,11 +652,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../LDQUANTS/ldquants.c1.html">
    LDQUANTS.C1 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../LSSONDE/lssonde.c1.html">
-   LSSONDE.C1 Plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -922,21 +892,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../RLPROF/2rlprofdep1turn.c0.html">
    2RLPROFDEP1TURN.C0 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../RLPROF/rlprofmerge1turn.c0.html">
-   RLPROFMERGE1TURN.C0 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../RLPROF/rlprofmerge2news.c0.html">
-   RLPROFMERGE2NEWS.C0 Plots
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../RLPROF/rlprofmrtempcal.c0.html">
-   RLPROFMRTEMPCAL.C0 Plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -1420,8 +1375,8 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">site_facility</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;sgp&#39;</span><span class="p">,</span> <span class="s1">&#39;C1&#39;</span> <span class="p">)</span>
 
-<span class="n">date_start</span> <span class="o">=</span> <span class="s1">&#39;2000-06-26&#39;</span>
-<span class="n">date_end</span> <span class="o">=</span> <span class="s1">&#39;2000-07-02&#39;</span>
+<span class="n">date_start</span> <span class="o">=</span> <span class="s1">&#39;2022-03-27&#39;</span>
+<span class="n">date_end</span> <span class="o">=</span> <span class="s1">&#39;2022-04-02&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -1440,13 +1395,14 @@ title="Print to PDF"
 <span class="n">dir_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">+</span> <span class="n">site</span><span class="p">,</span> <span class="n">site</span> <span class="o">+</span> <span class="n">DATASTREAM_NAME</span> <span class="o">+</span> <span class="n">facility</span> <span class="o">+</span> <span class="sa">r</span><span class="s1">&#39;.&#39;</span> <span class="o">+</span> <span class="n">DATA_LEVEL</span> <span class="p">)</span>
 <span class="n">files_list</span>  <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dir_path</span><span class="p">):</span>
-    <span class="n">file_date_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">file_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">file_date_str</span><span class="p">,</span> <span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-        <span class="k">continue</span> 
-    <span class="k">if</span> <span class="n">d_date_start</span> <span class="o">&lt;=</span> <span class="n">file_date</span> <span class="ow">and</span> <span class="n">d_date_end</span> <span class="o">&gt;</span> <span class="n">file_date</span><span class="p">:</span>
-        <span class="n">files_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.nc&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.cdf&#39;</span><span class="p">)):</span>
+        <span class="n">file_date_str</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">file_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">file_date_str</span><span class="p">,</span> <span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="k">continue</span> 
+        <span class="k">if</span> <span class="n">d_date_start</span> <span class="o">&lt;=</span> <span class="n">file_date</span> <span class="ow">and</span> <span class="n">d_date_end</span> <span class="o">&gt;</span> <span class="n">file_date</span><span class="p">:</span>
+            <span class="n">files_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_path</span><span class="p">,</span> <span class="n">f</span><span class="p">))</span>
 
 <span class="c1"># Load files as a single dataset</span>
 <span class="n">ds</span> <span class="o">=</span> <span class="n">act</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">armfiles</span><span class="o">.</span><span class="n">read_netcdf</span><span class="p">(</span><span class="n">files_list</span><span class="p">)</span>
